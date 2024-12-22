@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US States: Home Values & Disaster Risk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>US States: Home Values & Disaster Risk</h1>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#tableau-viz">Interactive Map</a>
+            <a href="#filters">Filters & Recommendations</a>
+            <a href="#charts">Data Visualization</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Explore home values and natural disaster risks across the United States. Use the interactive map and tools below to find insights and recommendations tailored to your preferences.</p>
+    </section>
+
+    <!-- Tableau Viz Section -->
+    <section id="tableau-viz">
+        <h2>Interactive Map</h2>
+        <p>View our interactive map showing home values and natural disaster risks for each state.</p>
+        <div class='tableauPlaceholder' id='viz1734829376494' style='position: relative'><noscript><a href='#'><img alt='Sheet 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WY&#47;WYMXGM8H9&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;WYMXGM8H9' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WY&#47;WYMXGM8H9&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1734829376494');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    </section>
+
+    <!-- Filters and Recommendations Section -->
+    <section id="filters">
+        <h2>Filters & Recommendations</h2>
+        <p>Input your preferences to filter states and receive tailored recommendations based on your income and risk tolerance.</p>
+        <form id="filters-form">
+            <label for="income">Enter your annual income:</label>
+            <span>$</span>
+            <input class="input" id="income" placeholder="e.g. 30000">
+            <br>
+            <label for="risk">Select maximum risk level:</label>
+            <select id="risk">
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
+            </select>
+            <br>
+            <button type="button" id="filter-button">Get Recommendations</button>
+        </form>
+        <div id="recommendations"></div>
+    </section>
+
+    <!-- Complementary Data Visualizations -->
+    <section id="charts">
+        <h2>More Data Visualization</h2>
+        <p>Breakdown of the Present Disasters in the Recommended States Above</p>
+        <div id="disaster-charts">
+            <!-- Pie charts will be dynamically inserted here -->
+        </div>        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Alphonse Otieno + Joseph Kim. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script3.js"></script>
+
+</body>
+</html>
